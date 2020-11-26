@@ -12,6 +12,7 @@ dependencies {
     api(Libraries.Kotlin.reactDom)
     api(Libraries.Kotlin.css)
     api(Libraries.Kotlin.extensions)
+    api(Libraries.Kotlin.styled)
 
     api(npm("@material-ui/core", Libraries.Npm.MaterialUi.core))
 

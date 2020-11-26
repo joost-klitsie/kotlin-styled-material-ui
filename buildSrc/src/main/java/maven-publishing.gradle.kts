@@ -8,17 +8,17 @@ plugins {
     id("bintray-metadata")
 }
 
-val group = "net.subroh0508.kotlinmaterialui"
-val libVersion = "0.5.3"
+val group = "com.klitsie.ksmui"
+val libVersion = "0.5.3-SNAPSHOT"
 
-val siteUrl = "https://github.com/subroh0508/kotlin-material-ui"
-val githubUrl = "https://github.com/subroh0508/kotlin-material-ui"
+val siteUrl = "https://github.com/joost-klitsie/kotlin-styled-material-ui"
+val githubUrl = "https://github.com/joost-klitsie/kotlin-styled-material-ui"
 
 val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZZ")
 
 bintray {
-    user = project.property("bintray_user")?.toString()
-    key = project.property("bintray_key")?.toString()
+    user = ""?.toString()
+    key = ""?.toString()
     setPublications("ToMavenPublication")
 
     publish = false
@@ -32,7 +32,7 @@ bintray {
     }
     pkg.run {
         repo = "maven"
-        name = "Kotlin-Material-UI$repoNameSuffix"
+        name = "Kotlin-Styled-Material-UI$repoNameSuffix"
         setLicenses("Apache-2.0")
         websiteUrl = siteUrl
         vcsUrl = "$githubUrl.git"
@@ -71,8 +71,8 @@ fun Node.appendPomConfig() {
     }
     Node(this, "developers").also { developers ->
         Node(developers, "developer").also { developer ->
-            developer.appendNode("id", "subroh0508")
-            developer.appendNode("name", "Subroh Nishikori")
+            developer.appendNode("id", "joost")
+            developer.appendNode("name", "Joost Klitsie")
             developer.appendNode("email", "in-the-n@me-of.love")
         }
     }
